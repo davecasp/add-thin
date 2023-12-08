@@ -56,7 +56,7 @@ The steps are the following:
     ```
 - change into the repository:
     ```sh
-    cd add_thin
+    cd add-thin
     ```
 - (_optional_) activate the environment (everytime you'll enter the folder, the environment will be automatically activated)
     ```sh

@@ -1,0 +1,3 @@
+root: data/
+batch_size: 512
+name: reddit_politics_submissions

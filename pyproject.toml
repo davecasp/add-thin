@@ -1,0 +1,53 @@
+[build-system]
+requires = ["flit_core >=3.7,<4"]
+build-backend = "flit_core.buildapi"
+
+[project]
+name = "add_thin"
+dynamic = ["version", "description"]
+authors = [
+    {name = "David Lüdke", email = "d.luedke@tum.de"},
+]
+dependencies = [
+    # PyTorch etc.
+    "torch ~= 2.0",
+    "pytorch-lightning ~= 1.7",
+    "torchmetrics",
+    "torchvision",
+    "einops",
+    "torchtyping",
+
+    # General science & ml
+    "numpy",
+    "scipy",
+    "scikit-learn",
+    "pandas",
+
+    # Plotting & visualization
+    "matplotlib",
+    "seaborn",
+
+    # hydra & logging
+    "hydra-core ~= 1.2.0",
+    "hydra-submitit-launcher",
+    "wandb ~= 0.13",
+
+    # Utilities
+    "tqdm",
+    "rich",
+    "ipython",
+    "ipdb",
+    "jupyterlab",
+    "ipympl",
+    "typeguard ~= 2.9",
+]
+requires-python = ">=3.10"
+license = {text = "MIT"}
+
+[tool.isort]
+profile = "black"
+known_third_party = ["wandb"]
+
+[tool.black]
+line-length = 80
+target-version = ["py310"]
